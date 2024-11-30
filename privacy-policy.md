@@ -1,4 +1,4 @@
-## Guard: Privacy policy
+## Guard: Privacy Policy
 
 ### Data collected by the app
 
@@ -24,3 +24,12 @@ Data in encrypted transit is:
 
 | Permission | Why it is required |
 | :---: | --- |
+| `android.permission.WAKE_LOCK` | Required to start the threat scan in the background. Automatically granted by the system; cannot be revoked by user. |
+ `android.permission.POST_NOTIFICATIONS` | Required by the app to post notifications. Has to be granted by the user manually; can be revoked by the system or the user at any time. Notifies the user when a threat scan is finished. |
+ `android.permission.INTERNET` | Required for communicating with external API:s when threat scanning. |
+ `android.permission.MANAGE_EXTERNAL_STORAGE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE` | Required for malware scanning. `MANAGE_EXTERNAL_STORAGE` is for API level 33 and above, `WRITE_EXTERNAL_STORAGE` and `READ_EXTERNAL_STORAGE` for Api level 32 and below. |
+ `android.permission.QUERY_ALL_PACKAGES` | Required by the app to get all non system apps to search for known vulnerabilities in them. |
+ `android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION` | Required by the app to search for nearby Wi-Fi devices, because of usage of WifiManager.getScanResults() | 
+ `"android.permission.ACCESS_NETWORK_STATE"` | Required by the app to determine if the device is connected to Wi-Fi. By default, the threat scan is only running when the app is connected to an unmetered Wi-Fi. |
+  `"android.permission.ACCESS_WIFI_STATE"` | Required by the app to get security information about the current Wi-Fi connection. |
+ 
