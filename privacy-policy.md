@@ -32,4 +32,4 @@ Data in encrypted transit is:
  `android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION` | Required by the app to search for nearby Wi-Fi devices, because of usage of WifiManager.getScanResults() | 
  `"android.permission.ACCESS_NETWORK_STATE"` | Required by the app to determine if the device is connected to Wi-Fi. By default, the threat scan is only running when the app is connected to an unmetered Wi-Fi. |
   `"android.permission.ACCESS_WIFI_STATE"` | Required by the app to get security information about the current Wi-Fi connection. |
- 
+ `android.permission.RECEIVE_BOOT_COMPLETED` | Required by the app to keep the periodic threat scan alive. |
